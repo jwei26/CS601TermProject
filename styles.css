@@ -135,12 +135,12 @@ ul li {
     margin: 20px 0;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    background-color: rgba(152, 152, 152, 0.373); /* Slightly transparent */
-    transition: transform 0.3s ease; /* For hover effect */
+    background-color: rgba(152, 152, 152, 0.373);
+    transition: transform 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-10px); /* Move up when hovered */
+    transform: translateY(-10px);
 }
 
 .project-card h2 {
@@ -152,15 +152,15 @@ ul li {
     margin-top: 10px;
     color: white;
     text-decoration: none;
-    background: #007BFF; /* Changed color */
+    background: #007BFF;
     padding: 5px 10px;
-    border-radius: 20px; /* Rounded borders */
-    transition: background 0.3s ease, transform 0.3s ease; /* Added transition for hover effect */
+    border-radius: 20px;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .project-card a:hover {
-    background: #0056b3; /* Darken on hover */
-    transform: translateY(-2px); /* Slight move up */
+    background: #0056b3;
+    transform: translateY(-2px);
 }
 
 
@@ -175,12 +175,12 @@ ul li {
     margin: 20px 0;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    background-color: rgba(152, 152, 152, 0.373); /* Slightly transparent */
-    transition: transform 0.3s ease; /* For hover effect */
+    background-color: rgba(152, 152, 152, 0.373);
+    transition: transform 0.3s ease;
 }
 
 .job-card:hover {
-    transform: translateY(-10px); /* Move up when hovered */
+    transform: translateY(-10px);
 }
 
 .job-card h3 {
@@ -193,16 +193,16 @@ ul li {
 .job-card button {
     padding: 5px 10px;
     border: none;
-    border-radius: 20px; /* Rounded borders */
-    background-color: #007BFF; /* Changed color */
-    color: white; /* Text color */
+    border-radius: 20px;
+    background-color: #007BFF;
+    color: white;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease; /* Added transition for hover effect */
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .job-card button:hover {
-    background-color: #0056b3; /* Darken on hover */
-    transform: translateY(-2px); /* Slight move up */
+    background-color: #0056b3;
+    transform: translateY(-2px);
 }
 
 /* Contact */
