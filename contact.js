@@ -9,35 +9,17 @@ const app = Vue.createApp({
     },
     methods: {
         submitForm() {
-            const data = {
-                name: this.name,
-                email: this.email,
-                message: this.message
-            };
-            fetch('https://jsonplaceholder.typicode.com/posts', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-            })
-            .then(response => response.json())
-            .then(data => {
-                this.submitted = true;
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-            });
+            submitAndValidateForm(this);
         }
     }
 })
 
 app.mount('#app')
 
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
+function submitAndValidateForm(vm) {
+    var name = vm.name;
+    var email = vm.email;
+    var message = vm.message;
     var isValid = true;
 
     if (!name.match(/^[a-zA-Z]{2,}$/)) {
@@ -61,9 +43,28 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         document.getElementById('messageError').innerText = '';
     }
 
-    if (!isValid) {
-        event.preventDefault();
+    if (isValid) {
+        const data = {
+            name: name,
+            email: email,
+            message: message
+        };
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(data => {
+            vm.submitted = true;
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
     }
-});
+}
+
 
 
