@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <header id="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+    <main id="main-content">
+        <div id="app">
+            <h1>Contact Me</h1>
+            <form @submit.prevent="submitForm">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" v-model="name" required><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" v-model="email" required><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" v-model="message" required></textarea><br>
+                <input type="submit" value="Submit">
+            </form>
+            <p v-if="submitted">Thank you for your message. I'll get back to you soon!</p>
+        </div>
+    </main>
+    <footer>
+        &copy; 2023 Your Name
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>

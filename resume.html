@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <header id="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+    <main id="main-content">
+        <div id="app">
+            <h1>My Resume</h1>
+            <p>Work Experience</p>
+            <div v-for="job in jobs" :key="job.title" class="job-card">
+                <h3>{{ job.title }} at {{ job.company }} 
+                <button @click="job.showDetails = !job.showDetails">{{ job.showDetails ? 'Hide Details' : 'Show Details' }}</button></h3>
+                <p v-show="job.showDetails">{{ job.details }}</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        &copy; 2023 Your Name
+    </footer>
+
+    <script src="resume.js"></script>
+</body>
+</html>
