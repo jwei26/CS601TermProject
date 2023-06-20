@@ -1,6 +1,7 @@
 Personal Portfolio Website
 
 This project is a personal portfolio website designed to showcase my skills, experiences, and projects. It serves as a comprehensive digital resume, providing a quick and easy way for potential employers or collaborators to get an overview of my professional capabilities and past work.
+
 Technologies
 
 The website is created with:
